@@ -12,4 +12,4 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
       - run: npm install prettier
-      - run: npx prettier --single-quote --check .
+      - run: npx prettier --double-quote --check .
