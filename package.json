@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "dependencies": {
+    "prettier": "^2.4.1"
+  },
+  "scripts": {
+    "test": "prettier --check ."
+  },
+  "prettier": {
+    "singleQuote": true
+  }
+}
