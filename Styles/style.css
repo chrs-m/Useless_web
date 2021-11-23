@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Mountain of christmas";
+  src: local("Mountain of christmas"),
+    url(Fonts/MountainsofChristmas-Bold.woff2) format("woff2");
+  font-weight: 700;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: "Mountain of christmas";
+  src: local("Mountain of christmas"),
+    url(Fonts/MountainsofChristmas-Regular.woff2) format("woff2");
+  font-weight: 400;
+  font-style: regular;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
