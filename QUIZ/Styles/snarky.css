@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.snarky {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: hotpink;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.triangle {
+  width: 10px;
+  height: 10px;
+  border-bottom: solid 20px rgb(200, 230, 50);
+  border-left: solid 20px transparent;
+  border-right: solid 20px transparent;
+  margin-bottom: 5px;
+}
+
+.comment {
+  position: absolute;
+  left: 15px;
+  top: 75px;
+  width: auto;
+  height: auto;
+  background-color: limegreen;
+  padding: 5px 5px;
+  border-radius: 8px;
+  cursor: pointer;
+}
