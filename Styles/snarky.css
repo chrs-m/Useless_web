@@ -1,16 +1,13 @@
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .snarky {
   position: absolute;
-  left: 15px;
-  top: 15px;
+  left: 16px;
+  top: 16px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -32,7 +29,7 @@
 
 .comment {
   position: absolute;
-  left: 15px;
+  left: 16px;
   top: 75px;
   width: auto;
   height: auto;
@@ -40,4 +37,11 @@
   padding: 5px 5px;
   border-radius: 8px;
   cursor: pointer;
+  font-size: 1.1rem;
 }
+
+@media screen and (min-width: 400px) {
+  .comment {
+    font-size: 1.2rem;
+  }
+} ;

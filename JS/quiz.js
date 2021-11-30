@@ -1,4 +1,4 @@
-// DOCUEMNT QUERIES
+// QUERY SELECTORS
 const startButton = document.querySelector(".start-btn");
 const nextButton = document.querySelector(".next-btn");
 const questionContainer = document.querySelector(".question-container");
@@ -11,13 +11,6 @@ const setNextQuestion = () => {
   resetState();
   showQuestion(shuffledQuestions[currentQuestionIndex]);
 };
-
-// START AND NEXT BUTTONS EVENTS
-startButton.addEventListener("click", startGame);
-nextButton.addEventListener("click", () => {
-  currentQuestionIndex++;
-  setNextQuestion();
-});
 
 // QUESTIONS ARRAY
 const questions = [
@@ -49,6 +42,14 @@ const startGame = () => {
   questionContainer.classList.remove("hide");
   setNextQuestion();
 };
+
+// START AND NEXT BUTTONS EVENTS
+startButton.addEventListener("click", startGame);
+nextButton.addEventListener("click", () => {
+  currentQuestionIndex++;
+  setNextQuestion();
+  commentBox.classList.toggle("hide");
+});
 
 // QUESTION EVENTS
 const showQuestion = (question) => {
@@ -90,13 +91,30 @@ const selectAnswer = (e) => {
   }
 };
 
-// CORRECT OR WRONG EVENT
+// SNARKY COMMENTS
+const answerSnarkyComments = [
+  "LOL",
+  "This quiz such hard..",
+  "How did you even manage to get in? *sigh*",
+  "Such a hard question, right??? *eyeroll*",
+  "Please stop embarassing yourself..",
+  "Maybe there is a point for the show 'smarter than a 5h grader' to exist..",
+];
+
+const answerCommentBox = document.querySelector(".comment");
+
+// CORRECT OR WRONG ANSWER
 const setStatusClass = (element, correct) => {
   clearStatusClass(element);
   if (correct) {
     element.classList.add("correct");
   } else {
     element.classList.add("wrong");
+    commentBox.classList.remove("hide");
+    answerCommentBox.innerText =
+      answerSnarkyComments[
+        Math.floor(Math.random() * answerSnarkyComments.length)
+      ];
   }
 };
 
