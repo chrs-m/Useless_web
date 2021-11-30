@@ -7,10 +7,10 @@ const answerButtonsElement = document.querySelector(".answer-btns");
 
 let shuffledQuestions, currentQuestionIndex;
 
-function setNextQuestion() {
+const setNextQuestion = () => {
   resetState();
   showQuestion(shuffledQuestions[currentQuestionIndex]);
-}
+};
 
 // START AND NEXT BUTTONS EVENTS
 startButton.addEventListener("click", startGame);
@@ -42,16 +42,16 @@ const questions = [
 ];
 
 // START GAME EVENT
-function startGame() {
+const startGame = () => {
   startButton.classList.add("hide");
   shuffledQuestions = questions.sort(() => Math.random() - 0.5);
   currentQuestionIndex = 0;
   questionContainer.classList.remove("hide");
   setNextQuestion();
-}
+};
 
 // QUESTION EVENTS
-function showQuestion(question) {
+const showQuestion = (question) => {
   questionElement.innerText = question.question;
   question.answers.forEach((answer) => {
     const button = document.createElement("button");
@@ -63,19 +63,19 @@ function showQuestion(question) {
     button.addEventListener("click", selectAnswer);
     answerButtonsElement.appendChild(button);
   });
-}
+};
 
 // RESET
-function resetState() {
+const resetState = () => {
   clearStatusClass(document.body);
   nextButton.classList.add("hide");
   while (answerButtonsElement.firstChild) {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild);
   }
-}
+};
 
 // SELECTED ANSWER EVENTS AND RESTART
-function selectAnswer(e) {
+const selectAnswer = (e) => {
   const selectedButton = e.target;
   const correct = selectedButton.dataset.correct;
   setStatusClass(document.body, correct);
@@ -88,20 +88,20 @@ function selectAnswer(e) {
     startButton.innerText = "Go again?";
     startButton.classList.remove("hide");
   }
-}
+};
 
 // CORRECT OR WRONG EVENT
-function setStatusClass(element, correct) {
+const setStatusClass = (element, correct) => {
   clearStatusClass(element);
   if (correct) {
     element.classList.add("correct");
   } else {
     element.classList.add("wrong");
   }
-}
+};
 
 // RESET BUTTONS AFTER ANSWER
-function clearStatusClass(element) {
+const clearStatusClass = (element) => {
   element.classList.remove("correct");
   element.classList.remove("wrong");
-}
+};

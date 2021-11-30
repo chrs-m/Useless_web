@@ -52,7 +52,7 @@ document.addEventListener("keydown", (e) => {
 });
 // ARROW LEFT FUNCTION
 document.addEventListener("keydown", (e) => {
-  if (event.keyCode === 37) {
+  if (e.keyCode === 37) {
     // console.log("moving left");
     triangle.style.borderBottomColor =
       backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
@@ -60,7 +60,7 @@ document.addEventListener("keydown", (e) => {
 });
 // ARROW DOWN FUNCTION
 document.addEventListener("keydown", (e) => {
-  if (event.keyCode === 40) {
+  if (e.keyCode === 40) {
     // console.log("moving down");
     snarky.style.backgroundColor =
       backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
@@ -68,7 +68,7 @@ document.addEventListener("keydown", (e) => {
 });
 // ARROW UP FUNCTION
 document.addEventListener("keydown", (e) => {
-  if (event.keyCode === 38) {
+  if (e.keyCode === 38) {
     // console.log("moving up");
     snarky.style.backgroundColor =
       backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
