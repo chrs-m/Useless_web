@@ -1,12 +1,13 @@
-INSERT MANDATORY GIF
+<img src="https://media1.giphy.com/media/YFFIlwitMkMkHdr97w/giphy.gif?cid=ecf05e477gkw7misyyovagd0yjtvwzjerak5piw3zjmv9v1z&rid=giphy.gif&ct=g" width="100%">
 
-# Project Title
+# Useless Quiz
 
-Text about the project. This would also be a great place to link the game on Netlify.
+Just your average useless quiz game with a touch of sass (you've been warned). Link to quiz [here](https://useless-quiz.netlify.app/).
 
 # Installation
 
-Add the installation instructions.
+1. Clone repo from GitHub
+2. Run in localhost or live preview
 
 # Code Review
 
