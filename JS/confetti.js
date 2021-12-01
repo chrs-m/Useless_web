@@ -1,7 +1,6 @@
 /**
  * Minified by jsDelivr using Terser v5.3.0.
  
- *
  * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
  */
 !(function (t, e) {
@@ -20,7 +19,7 @@
     function l(t) {
       var a = n.exports.Promise,
         o = void 0 !== a ? a : e.Promise;
-      return 'function' == typeof o ? new o(t) : (t(r, r), null);
+      return "function" == typeof o ? new o(t) : (t(r, r), null);
     }
     var c,
       s,
@@ -34,8 +33,8 @@
         ((h = Math.floor(1e3 / 60)),
         (u = {}),
         (d = 0),
-        'function' == typeof requestAnimationFrame &&
-        'function' == typeof cancelAnimationFrame
+        "function" == typeof requestAnimationFrame &&
+        "function" == typeof cancelAnimationFrame
           ? ((c = function (t) {
               var e = Math.random();
               return (
@@ -63,34 +62,34 @@
           if (f) return f;
           if (!a && i) {
             var e = [
-              'var CONFETTI, SIZE = {}, module = {};',
-              '(' + t.toString() + ')(this, module, true, SIZE);',
-              'onmessage = function(msg) {',
-              '  if (msg.data.options) {',
-              '    CONFETTI(msg.data.options).then(function () {',
-              '      if (msg.data.callback) {',
-              '        postMessage({ callback: msg.data.callback });',
-              '      }',
-              '    });',
-              '  } else if (msg.data.reset) {',
-              '    CONFETTI.reset();',
-              '  } else if (msg.data.resize) {',
-              '    SIZE.width = msg.data.resize.width;',
-              '    SIZE.height = msg.data.resize.height;',
-              '  } else if (msg.data.canvas) {',
-              '    SIZE.width = msg.data.canvas.width;',
-              '    SIZE.height = msg.data.canvas.height;',
-              '    CONFETTI = module.exports.create(msg.data.canvas);',
-              '  }',
-              '}',
-            ].join('\n');
+              "var CONFETTI, SIZE = {}, module = {};",
+              "(" + t.toString() + ")(this, module, true, SIZE);",
+              "onmessage = function(msg) {",
+              "  if (msg.data.options) {",
+              "    CONFETTI(msg.data.options).then(function () {",
+              "      if (msg.data.callback) {",
+              "        postMessage({ callback: msg.data.callback });",
+              "      }",
+              "    });",
+              "  } else if (msg.data.reset) {",
+              "    CONFETTI.reset();",
+              "  } else if (msg.data.resize) {",
+              "    SIZE.width = msg.data.resize.width;",
+              "    SIZE.height = msg.data.resize.height;",
+              "  } else if (msg.data.canvas) {",
+              "    SIZE.width = msg.data.canvas.width;",
+              "    SIZE.height = msg.data.canvas.height;",
+              "    CONFETTI = module.exports.create(msg.data.canvas);",
+              "  }",
+              "}",
+            ].join("\n");
             try {
               f = new Worker(URL.createObjectURL(new Blob([e])));
             } catch (t) {
               return (
                 void 0 !== typeof console &&
-                  'function' == typeof console.warn &&
-                  console.warn('🎊 Could not load worker', t),
+                  "function" == typeof console.warn &&
+                  console.warn("🎊 Could not load worker", t),
                 null
               );
             }
@@ -109,12 +108,12 @@
                     function r(e) {
                       e.data.callback === i &&
                         (delete m[i],
-                        t.removeEventListener('message', r),
+                        t.removeEventListener("message", r),
                         (g = null),
                         o(),
                         a());
                     }
-                    t.addEventListener('message', r),
+                    t.addEventListener("message", r),
                       e(n, i),
                       (m[i] = r.bind(null, { data: { callback: i } }));
                   }));
@@ -137,16 +136,16 @@
         ticks: 200,
         x: 0.5,
         y: 0.5,
-        shapes: ['square', 'circle'],
+        shapes: ["square", "circle"],
         zIndex: 100,
         colors: [
-          '#26ccff',
-          '#a25afd',
-          '#ff5e7e',
-          '#88ff5a',
-          '#fcff42',
-          '#ffa62d',
-          '#ff36ff',
+          "#26ccff",
+          "#a25afd",
+          "#ff5e7e",
+          "#88ff5a",
+          "#fcff42",
+          "#ffa62d",
+          "#ff36ff",
         ],
         disableForReducedMotion: !1,
         scalar: 1,
@@ -171,7 +170,7 @@
       var c,
         s,
         h = e.slice(),
-        u = t.getContext('2d'),
+        u = t.getContext("2d"),
         d = l(function (e) {
           function l() {
             (c = s = null), u.clearRect(0, 0, i.width, i.height), r(), e();
@@ -203,17 +202,17 @@
                     r = e.wobbleY + e.random * e.tiltSin;
                   return (
                     (t.fillStyle =
-                      'rgba(' +
+                      "rgba(" +
                       e.color.r +
-                      ', ' +
+                      ", " +
                       e.color.g +
-                      ', ' +
+                      ", " +
                       e.color.b +
-                      ', ' +
+                      ", " +
                       (1 - n) +
-                      ')'),
+                      ")"),
                     t.beginPath(),
-                    'circle' === e.shape
+                    "circle" === e.shape
                       ? t.ellipse
                         ? t.ellipse(
                             e.x,
@@ -270,14 +269,14 @@
     function k(t, n) {
       var a,
         o = !t,
-        r = !!p(n || {}, 'resize'),
-        c = p(n, 'disableForReducedMotion', Boolean),
-        s = i && !!p(n || {}, 'useWorker') ? v() : null,
+        r = !!p(n || {}, "resize"),
+        c = p(n, "disableForReducedMotion", Boolean),
+        s = i && !!p(n || {}, "useWorker") ? v() : null,
         h = o ? w : x,
         u = !(!t || !s) && !!t.__confetti_initialized,
         d =
-          'function' == typeof matchMedia &&
-          matchMedia('(prefers-reduced-motion)').matches;
+          "function" == typeof matchMedia &&
+          matchMedia("(prefers-reduced-motion)").matches;
       function f(e, n, o) {
         for (
           var i,
@@ -287,19 +286,19 @@
             s,
             u,
             d,
-            f = p(e, 'particleCount', Math.floor),
-            g = p(e, 'angle', Number),
-            m = p(e, 'spread', Number),
-            b = p(e, 'startVelocity', Number),
-            v = p(e, 'decay', Number),
-            y = p(e, 'gravity', Number),
-            w = p(e, 'colors'),
-            x = p(e, 'ticks', Number),
-            k = p(e, 'shapes'),
-            I = p(e, 'scalar'),
+            f = p(e, "particleCount", Math.floor),
+            g = p(e, "angle", Number),
+            m = p(e, "spread", Number),
+            b = p(e, "startVelocity", Number),
+            v = p(e, "decay", Number),
+            y = p(e, "gravity", Number),
+            w = p(e, "colors"),
+            x = p(e, "ticks", Number),
+            k = p(e, "shapes"),
+            I = p(e, "scalar"),
             T = (function (t) {
-              var e = p(t, 'origin', Object);
-              return (e.x = p(e, 'x', Number)), (e.y = p(e, 'y', Number)), e;
+              var e = p(t, "origin", Object);
+              return (e.x = p(e, "x", Number)), (e.y = p(e, "y", Number)), e;
             })(e),
             E = f,
             S = [],
@@ -342,7 +341,7 @@
               tiltAngle: Math.random() * Math.PI,
               color:
                 ((r = i.color),
-                (l = String(r).replace(/[^0-9a-f]/gi, '')),
+                (l = String(r).replace(/[^0-9a-f]/gi, "")),
                 l.length < 6 && (l = l[0] + l[0] + l[1] + l[1] + l[2] + l[2]),
                 {
                   r: M(l.substring(0, 2)),
@@ -366,8 +365,8 @@
         return a ? a.addFettis(S) : (a = C(t, S, h, n, o)).promise;
       }
       function g(n) {
-        var i = c || p(n, 'disableForReducedMotion', Boolean),
-          g = p(n, 'zIndex', Number);
+        var i = c || p(n, "disableForReducedMotion", Boolean),
+          g = p(n, "zIndex", Number);
         if (i && d)
           return l(function (t) {
             t();
@@ -377,12 +376,12 @@
           : o &&
             !t &&
             ((t = (function (t) {
-              var e = document.createElement('canvas');
+              var e = document.createElement("canvas");
               return (
-                (e.style.position = 'fixed'),
-                (e.style.top = '0px'),
-                (e.style.left = '0px'),
-                (e.style.pointerEvents = 'none'),
+                (e.style.position = "fixed"),
+                (e.style.top = "0px"),
+                (e.style.left = "0px"),
+                (e.style.pointerEvents = "none"),
                 (e.style.zIndex = t),
                 e
               );
@@ -408,14 +407,14 @@
         }
         function v() {
           (a = null),
-            r && e.removeEventListener('resize', b),
+            r && e.removeEventListener("resize", b),
             o && t && (document.body.removeChild(t), (t = null), (u = !1));
         }
         return (
           s && !u && s.init(t),
           (u = !0),
           s && (t.__confetti_initialized = !0),
-          r && e.addEventListener('resize', b, !1),
+          r && e.addEventListener("resize", b, !1),
           s ? s.fire(n, m, v) : f(n, m, v)
         );
       }
@@ -430,7 +429,7 @@
       (n.exports.create = k);
   })(
     (function () {
-      return void 0 !== t ? t : 'undefined' != typeof self ? self : this;
+      return void 0 !== t ? t : "undefined" != typeof self ? self : this;
     })(),
     e,
     !1
@@ -439,7 +438,7 @@
 })(window, {});
 //# sourceMappingURL=/sm/9688826196c1d2f0e537c35a034ab8876ac7f5652d14f485125a607a9aae375d.map
 
-const canvas = document.querySelector('canvas');
+const canvas = document.querySelector("canvas");
 var myConfetti = confetti.create(canvas, {
   resize: true,
   useWorker: true,

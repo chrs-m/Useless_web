@@ -47,16 +47,17 @@ commentBox.addEventListener("click", () => {
   commentBox.classList.add("hide");
 });
 
-// LISTEN FOR EVENT (FINDING KEYCODES)
+// LISTEN FOR EVENTS (FINDING KEYCODES)
 document.addEventListener("keydown", (keyPress) => {
   //   console.log(event);
 });
 
 // SNARKY FUNCTIONS
+
+// CHANGE SNARKYS COLORS
 // ARROW RIGHT FUNCTION
 document.addEventListener("keydown", (e) => {
   if (event.keyCode === 39) {
-    // console.log("moving right");
     triangle.style.borderBottomColor =
       backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
   }
@@ -64,30 +65,28 @@ document.addEventListener("keydown", (e) => {
 // ARROW LEFT FUNCTION
 document.addEventListener("keydown", (e) => {
   if (e.keyCode === 37) {
-    // console.log("moving left");
-    triangle.style.borderBottomColor =
-      backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
-  }
-});
-// ARROW DOWN FUNCTION
-document.addEventListener("keydown", (e) => {
-  if (e.keyCode === 40) {
-    // console.log("moving down");
-    snarky.style.backgroundColor =
-      backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
-  }
-});
-// ARROW UP FUNCTION
-document.addEventListener("keydown", (e) => {
-  if (e.keyCode === 38) {
-    // console.log("moving up");
     snarky.style.backgroundColor =
       backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
   }
 });
 
+// HAVE A LITTLE SURPRISE
 const surprise = document.querySelector(".surprise");
 
 surprise.addEventListener("click", () => {
   celebrate();
+});
+
+// CHANGE BACKGROUND ON SCROLL
+document.addEventListener("scroll", (e) => {
+  document.body.style.backgroundColor =
+    backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
+});
+
+// INFO CONTAINER
+const info = document.querySelector(".info");
+const infoContainer = document.querySelector(".info-container");
+
+info.addEventListener("click", () => {
+  infoContainer.classList.toggle("hide");
 });

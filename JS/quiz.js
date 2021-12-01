@@ -32,6 +32,24 @@ const questions = [
       { text: "What was the question?", correct: false },
     ],
   },
+  {
+    question: "You are?",
+    answers: [
+      { text: "Not great", correct: true },
+      { text: "Epic", correct: false },
+      { text: "Alive?", correct: false },
+      { text: "Worthy", correct: false },
+    ],
+  },
+  {
+    question: "Most useless thing",
+    answers: [
+      { text: "Food", correct: false },
+      { text: "Water", correct: false },
+      { text: "This quiz", correct: false },
+      { text: "Me", correct: true },
+    ],
+  },
 ];
 
 // START GAME EVENT
@@ -89,16 +107,17 @@ const selectAnswer = (e) => {
     startButton.innerText = "Go again?";
     startButton.classList.remove("hide");
   }
+  selectedButton.style.backgroundColor = "rgb(143, 143, 143)";
 };
 
 // SNARKY COMMENTS
 const answerSnarkyComments = [
   "LOL",
   "This quiz such hard..",
-  "How did you even manage to get in? *sigh*",
+  "The dumbulance is on it's way",
   "Such a hard question, right??? *eyeroll*",
   "Please stop embarassing yourself..",
-  "Maybe there is a point for the show 'smarter than a 5h grader' to exist..",
+  "Maybe there is a point for the show 'smarter than a 5h grader' to exist.. (you)",
 ];
 
 const answerCommentBox = document.querySelector(".comment");

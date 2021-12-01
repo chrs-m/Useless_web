@@ -5,7 +5,7 @@
 }
 
 .snarky {
-  position: absolute;
+  position: fixed;
   left: 16px;
   top: 16px;
   width: 50px;
@@ -16,6 +16,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.2s all linear;
 }
 
 .triangle {
@@ -25,10 +26,11 @@
   border-left: solid 20px transparent;
   border-right: solid 20px transparent;
   margin-bottom: 5px;
+  transition: 0.2s all linear;
 }
 
 .comment {
-  position: absolute;
+  position: fixed;
   left: 16px;
   top: 75px;
   width: auto;
@@ -44,4 +46,4 @@
   .comment {
     font-size: 1.2rem;
   }
-} ;
+}
