@@ -107,7 +107,7 @@ const selectAnswer = (e) => {
     startButton.innerText = "Go again?";
     startButton.classList.remove("hide");
   }
-  selectedButton.style.backgroundColor = "rgb(143, 143, 143)";
+  // selectedButton.style.backgroundColor = "rgb(143, 143, 143)";
 };
 
 // SNARKY COMMENTS

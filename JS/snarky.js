@@ -87,6 +87,12 @@ document.addEventListener("scroll", (e) => {
 const info = document.querySelector(".info");
 const infoContainer = document.querySelector(".info-container");
 
+// TOGGLE TO SHOW INFO CONTAINER
 info.addEventListener("click", () => {
   infoContainer.classList.toggle("hide");
+});
+
+// HIDE THE INFO CONTAINER
+infoContainer.addEventListener("click", () => {
+  infoContainer.classList.add("hide");
 });
