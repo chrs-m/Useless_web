@@ -6,15 +6,26 @@
 }
 
 @font-face {
-  font-family: "Pergola";
-  src: local("Pergola"), url(../Fonts/Pergola-Demo_woff2.woff2) format("woff2");
-  font-weight: normal;
-}
-@font-face {
   font-family: "MagicMushroom";
   src: local("MagicMushroom"),
     url(../Fonts/MagicMushroom_woff2.woff2) format("woff2");
   font-weight: normal;
+}
+@font-face {
+  font-family: "LemonMilk";
+  src: local("LemonMilk"), url(../Fonts/LEMONMILK-Regular.woff2) format("woff2");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "LemonMilk";
+  src: local("LemonMilk"), url(../Fonts/LEMONMILK-Light.woff2) format("woff2");
+  font-weight: lighter;
+}
+@font-face {
+  font-family: "LemonMilk";
+  src: local("LemonMilk"), url(../Fonts/LEMONMILK-Bold.woff2) format("woff2");
+  font-weight: bold;
 }
 
 :root {
@@ -44,6 +55,7 @@ body.wrong {
 }
 
 .container {
+  font-family: "MagicMushroom";
   width: 800px;
   max-width: 80%;
   background-color: var(--whiteish);
@@ -52,10 +64,11 @@ body.wrong {
   box-shadow: 0 0 10px 2px var(--blackish);
 
   position: fixed;
-  top: 35%;
+  top: 30%;
 }
 
 .question {
+  font-family: "MagicMushroom";
   font-size: 3rem;
   font-weight: bold;
 }
@@ -68,6 +81,7 @@ body.wrong {
 }
 
 .btn {
+  font-family: "MagicMushroom";
   --color: var(--neutral-color);
   background-color: var(--color);
   border: 1px solid var(--color);
@@ -138,17 +152,19 @@ body.wrong {
   bottom: 68px;
   width: 340px;
   height: auto;
-  background-color: rgb(105, 108, 255);
-  color: var(--whiteish);
+  background-color: rgb(105, 255, 230);
+  color: var(--blackish);
   padding: 5px 5px;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.65rem;
+  box-shadow: 0 0 10px 2px var(--blackish);
+  font-family: "LemonMilk";
 }
 
 @media screen and (min-width: 400px) {
   .container {
-    top: 50%;
+    top: 35%;
   }
   .start-btn,
   .next-btn {
@@ -169,7 +185,8 @@ body.wrong {
   .info-container {
     width: auto;
     height: auto;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
+    font-weight: lighter;
   }
 }
 

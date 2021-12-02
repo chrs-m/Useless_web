@@ -84,6 +84,22 @@ const showQuestion = (question) => {
   });
 };
 
+// const showQuestion = (question) => {
+//   questionElement.innerText = question.question;
+//   question.answers.forEach((answer, i) => {
+//     const button = document.createElement("button");
+//     button.innerText = answer.text;
+//     button.classList.add("btn");
+//     if (answer.correct) {
+//       button.dataset.correct = answer.correct;
+//     }
+//     button.addEventListener("click", (event) => {
+//       selectAnswer(i);
+//     });
+//     answerButtonsElement.appendChild(button);
+//   });
+// };
+
 // RESET
 const resetState = () => {
   clearStatusClass(document.body);
@@ -109,6 +125,24 @@ const selectAnswer = (e) => {
   }
   // selectedButton.style.backgroundColor = "rgb(143, 143, 143)";
 };
+
+// const selectAnswer = (e, i) => {
+//   console.log(i);
+//   console.log(questions[currentQuestionIndex].answers[i].correct);
+//   const selectedButton = e.target;
+//   const correct = selectedButton.dataset.correct;
+//   setStatusClass(document.body, correct);
+//   Array.from(answerButtonsElement.children).forEach((button) => {
+//     setStatusClass(button, button.dataset.correct);
+//   });
+//   if (shuffledQuestions.length > currentQuestionIndex + 1) {
+//     nextButton.classList.remove("hide");
+//   } else {
+//     startButton.innerText = "Go again?";
+//     startButton.classList.remove("hide");
+//   }
+//   // selectedButton.style.backgroundColor = "rgb(143, 143, 143)";
+// };
 
 // SNARKY COMMENTS
 const answerSnarkyComments = [
