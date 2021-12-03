@@ -436,7 +436,7 @@
   ),
     (t.confetti = e.exports);
 })(window, {});
-//# sourceMappingURL=/sm/9688826196c1d2f0e537c35a034ab8876ac7f5652d14f485125a607a9aae375d.map
+// # sourceMappingURL=/sm/9688826196c1d2f0e537c35a034ab8876ac7f5652d14f485125a607a9aae375d.map
 
 const canvas = document.querySelector("canvas");
 var myConfetti = confetti.create(canvas, {
@@ -444,11 +444,25 @@ var myConfetti = confetti.create(canvas, {
   useWorker: true,
 });
 
+// DIFFERENT CONFETTI FOR DIFFERENT SCREEN SIZES (MOBILE/DEKSTOP)
+const mobileWindow = window.innerWidth < 400;
+const desktopWindow = window.innerWidth > 400;
+
+let values = {
+  particles: 700,
+  spread: 400,
+};
+
+if (mobileWindow) {
+  values = {
+    particles: 500,
+    spread: 100,
+  };
+}
+
 const celebrate = () => {
   myConfetti({
-    particleCount: 100,
-    spread: 160,
-    // any other options from the global
-    // confetti function
+    particleCount: values.particles,
+    spread: values.spread,
   });
 };

@@ -19,11 +19,6 @@
 
 @font-face {
   font-family: "LemonMilk";
-  src: local("LemonMilk"), url(../Fonts/LEMONMILK-Light.woff2) format("woff2");
-  font-weight: lighter;
-}
-@font-face {
-  font-family: "LemonMilk";
   src: local("LemonMilk"), url(../Fonts/LEMONMILK-Bold.woff2) format("woff2");
   font-weight: bold;
 }
@@ -165,18 +160,18 @@ body.wrong {
 .dad-emoji {
   position: fixed;
   right: 24px;
-  top: 16px;
-  font-size: 2rem;
+  top: 8px;
+  font-size: 3.2rem;
   cursor: pointer;
 }
 
 .dad-joke {
   font-family: "LemonMilk";
   position: fixed;
-  right: 16px;
-  top: 65px;
+  right: 24px;
+  top: 72px;
   margin-left: 16px;
-  width: auto;
+  width: 250px;
   height: auto;
   background-color: rgb(105, 255, 230);
   padding: 5px 5px;
@@ -211,6 +206,11 @@ body.wrong {
     height: auto;
     font-size: 0.9rem;
     font-weight: lighter;
+  }
+
+  .dad-joke {
+    font-size: 1rem;
+    width: auto;
   }
 }
 
