@@ -448,13 +448,13 @@ var myConfetti = confetti.create(canvas, {
 const mobileWindow = window.innerWidth < 400;
 const desktopWindow = window.innerWidth > 400;
 
-let values = {
+let confettiValues = {
   particles: 700,
   spread: 400,
 };
 
 if (mobileWindow) {
-  values = {
+  confettiValues = {
     particles: 500,
     spread: 100,
   };
@@ -462,7 +462,14 @@ if (mobileWindow) {
 
 const celebrate = () => {
   myConfetti({
-    particleCount: values.particles,
-    spread: values.spread,
+    particleCount: confettiValues.particles,
+    spread: confettiValues.spread,
   });
 };
+
+// HAVE A LITTLE SURPRISE
+const confettiSurprise = document.querySelector(".surprise");
+
+confettiSurprise.addEventListener("click", () => {
+  celebrate();
+});

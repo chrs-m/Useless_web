@@ -70,35 +70,38 @@ nextButton.addEventListener("click", () => {
 });
 
 // QUESTION EVENTS
-const showQuestion = (question) => {
-  questionElement.innerText = question.question;
-  question.answers.forEach((answer) => {
-    const button = document.createElement("button");
-    button.innerText = answer.text;
-    button.classList.add("btn");
-    if (answer.correct) {
-      button.dataset.correct = answer.correct;
-    }
-    button.addEventListener("click", selectAnswer);
-    answerButtonsElement.appendChild(button);
-  });
-};
 
+// RUN THIS CODE IF YOU WANT A NORMAL QUIZ
 // const showQuestion = (question) => {
 //   questionElement.innerText = question.question;
-//   question.answers.forEach((answer, i) => {
+//   question.answers.forEach((answer) => {
 //     const button = document.createElement("button");
 //     button.innerText = answer.text;
 //     button.classList.add("btn");
 //     if (answer.correct) {
 //       button.dataset.correct = answer.correct;
 //     }
-//     button.addEventListener("click", (event) => {
-//       selectAnswer(i);
-//     });
+//     button.addEventListener("click", selectAnswer);
 //     answerButtonsElement.appendChild(button);
 //   });
 // };
+
+// RUN THIS CODE IF YOU WANT A 'NEVER CORRECT ANSWER' QUIZ
+const showQuestion = (question) => {
+  questionElement.innerText = question.question;
+  question.answers.forEach((answer, i) => {
+    const button = document.createElement("button");
+    button.innerText = answer.text;
+    button.classList.add("btn");
+    if (answer.correct) {
+      button.dataset.correct = answer.correct;
+    }
+    button.addEventListener("click", (event) => {
+      selectAnswer(event, i);
+    });
+    answerButtonsElement.appendChild(button);
+  });
+};
 
 // RESET
 const resetState = () => {
@@ -110,25 +113,9 @@ const resetState = () => {
 };
 
 // SELECTED ANSWER EVENTS AND RESTART
-const selectAnswer = (e) => {
-  const selectedButton = e.target;
-  const correct = selectedButton.dataset.correct;
-  setStatusClass(document.body, correct);
-  Array.from(answerButtonsElement.children).forEach((button) => {
-    setStatusClass(button, button.dataset.correct);
-  });
-  if (shuffledQuestions.length > currentQuestionIndex + 1) {
-    nextButton.classList.remove("hide");
-  } else {
-    startButton.innerText = "Go again?";
-    startButton.classList.remove("hide");
-  }
-  // selectedButton.style.backgroundColor = "rgb(143, 143, 143)";
-};
 
-// const selectAnswer = (e, i) => {
-//   console.log(i);
-//   console.log(questions[currentQuestionIndex].answers[i].correct);
+// RUN THIS CODE IF YOU WANT A NORMAL QUIZ
+// const selectAnswer = (e) => {
 //   const selectedButton = e.target;
 //   const correct = selectedButton.dataset.correct;
 //   setStatusClass(document.body, correct);
@@ -144,6 +131,44 @@ const selectAnswer = (e) => {
 //   // selectedButton.style.backgroundColor = "rgb(143, 143, 143)";
 // };
 
+// RUN THIS CODE IF YOU WANT A 'NEVER CORRECT ANSWER' QUIZ
+const generateRandomBetween = (min, max, exclude) => {
+  let ranNum = Math.floor(Math.random() * (max - min)) + min;
+
+  if (ranNum === exclude) {
+    ranNum = generateRandomBetween(min, max, exclude);
+  }
+
+  return ranNum;
+};
+
+// Test
+let randomNr = generateRandomBetween(
+  0,
+  document.querySelectorAll(".btn").length,
+  i
+);
+console.log(x);
+
+const selectAnswer = (e, i) => {
+  const selectedButton = document.querySelectorAll(".btn")[3];
+  if (questions[currentQuestionIndex].answers[i].correct) {
+    selectedButton = document.querySelectorAll(".btn")[0];
+  }
+  // const correct = selectedButton.dataset.correct;
+  selectedButton.classList.add("correct");
+  // setStatusClass(document.body, correct);
+  // Array.from(answerButtonsElement.children).forEach((button) => {
+  //   setStatusClass(button, button.dataset.correct);
+  // });
+  if (shuffledQuestions.length > currentQuestionIndex + 1) {
+    nextButton.classList.remove("hide");
+  } else {
+    startButton.innerText = "Go again?";
+    startButton.classList.remove("hide");
+  }
+};
+
 // SNARKY COMMENTS
 const answerSnarkyComments = [
   "LOL",
@@ -152,6 +177,9 @@ const answerSnarkyComments = [
   "Such a hard question, right??? *eyeroll*",
   "Please stop embarassing yourself..",
   "Maybe there is a point for the show 'smarter than a 5h grader' to exist.. (you)",
+  "This is just embarassing..",
+  "Zzz..",
+  "Watching you take this quiz is more entertaining than watching reality TV!",
 ];
 
 const answerCommentBox = document.querySelector(".comment");
