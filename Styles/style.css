@@ -161,7 +161,7 @@ body.wrong {
   position: fixed;
   right: 24px;
   top: 8px;
-  font-size: 3.2rem;
+  font-size: 3.5rem;
   cursor: pointer;
 }
 
@@ -169,8 +169,8 @@ body.wrong {
   font-family: "LemonMilk";
   position: fixed;
   right: 24px;
-  top: 72px;
-  margin-left: 16px;
+  margin-left: 24px;
+  top: 80px;
   width: 250px;
   height: auto;
   background-color: rgb(105, 255, 230);
@@ -211,6 +211,16 @@ body.wrong {
   .dad-joke {
     font-size: 1rem;
     width: auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .dad-joke {
+    font-size: 1.3rem;
+  }
+
+  .info-container {
+    font-size: 1.2rem;
   }
 }
 
