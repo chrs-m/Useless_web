@@ -19,7 +19,7 @@ const jokeContainer = document.querySelector(".dad-joke");
 
 // ----------------------------------------------------------------
 
-// RUN THIS CODE TO USE DAD JOKE API ***************
+// RUN THIS CODE TO USE ICANHAZDADJOKE API ***************
 
 dadEmoji.addEventListener("click", generateJokes);
 

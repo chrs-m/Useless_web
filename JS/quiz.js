@@ -105,6 +105,10 @@ const answerSnarkyComments = [
   "This is just embarassing..",
   "Zzz..",
   "Watching you take this quiz is more entertaining than watching reality TV!",
+  "You're the reason why we need to have directions on shampoo.",
+  "Go do someting meaningful instead of taking up my time with this nonsense.",
+  "If had a dollar for every smart thing you say. I’ll be poor.",
+  "Well at least your mom thinks you’re smart. SIKE! No one does.",
 ];
 
 const answerCommentBox = document.querySelector(".comment");

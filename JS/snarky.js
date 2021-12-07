@@ -17,8 +17,12 @@ const snarkyComments = [
   "Hello darkness my old friend..",
   "Why do you keep touching me all the time?",
   "Are you really that lonely?",
-  "Go do someting meaningful instead of taking up my time with this nonsense.",
   "1 + 1 = 2 *hint*",
+  "Don't be ashamed of yourself, that's your parents job.",
+  "I am busy right now, can I ignore you some other time?",
+  "It’s okay if you don’t like me. Not everyone has good taste.",
+  "Life’s good, you should get one.",
+  "I don’t have the energy to pretend to like you today.",
 ];
 
 // PRESS FOR RANDOM SNARKY COMMENT ***************
