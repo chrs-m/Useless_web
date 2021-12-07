@@ -4,6 +4,7 @@ const nextButton = document.querySelector(".next-btn");
 const questionContainer = document.querySelector(".question-container");
 const questionElement = document.querySelector(".question");
 const answerButtonsElement = document.querySelector(".answer-btns");
+const container = document.querySelector(".container");
 
 let shuffledQuestions, currentQuestionIndex;
 
@@ -18,6 +19,7 @@ const startGame = () => {
   shuffledQuestions = questions.sort(() => Math.random() - 0.5);
   currentQuestionIndex = 0;
   questionContainer.classList.remove("hide");
+  container.style.top = "25%";
   setNextQuestion();
 };
 
@@ -74,8 +76,6 @@ const resetState = () => {
 };
 
 // SELECTED ANSWER EVENTS AND RESTART ***************
-
-// ********** RUN THIS CODE IF YOU WANT A 'NORMAL' QUIZ **********
 const selectAnswer = (e) => {
   const selectedButton = e.target;
   const correct = selectedButton.dataset.correct;
@@ -91,23 +91,6 @@ const selectAnswer = (e) => {
   }
   // selectedButton.style.backgroundColor = "rgb(143, 143, 143)";
 };
-
-// ********** RUN THIS CODE IF YOU WANT A 'NEVER CORRECT ANSWER' QUIZ **********
-// const selectAnswer = (e) => {
-//   const selectedButton = e.target;
-//   const correct = selectedButton.dataset.correct;
-//   setStatusClass(document.body, correct);
-//   Array.from(answerButtonsElement.children).forEach((button) => {
-//     setStatusClass(button, button.dataset.correct);
-//   });
-//   if (shuffledQuestions.length > currentQuestionIndex + 1) {
-//     nextButton.classList.remove("hide");
-//   } else {
-//     startButton.innerText = "Go again?";
-//     startButton.classList.remove("hide");
-//   }
-//   // selectedButton.style.backgroundColor = "rgb(143, 143, 143)";
-// };
 
 // SNARKY COMMENTS ***************
 const answerSnarkyComments = [
