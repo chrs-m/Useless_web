@@ -449,13 +449,13 @@ const mobileWindow = window.innerWidth < 400;
 const desktopWindow = window.innerWidth > 400;
 
 let confettiValues = {
-  particles: 700,
+  particles: 1000,
   spread: 400,
 };
 
 if (mobileWindow) {
   confettiValues = {
-    particles: 500,
+    particles: 350,
     spread: 100,
   };
 }

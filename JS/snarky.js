@@ -4,7 +4,7 @@ const robotBelly = document.querySelector(".robot-belly");
 const robotLight = document.querySelector(".robot-light");
 const commentBox = document.querySelector(".comment");
 
-// SNARKY COMMENTS
+// SNARKY COMMENTS ***************
 const snarkyComments = [
   "What do you want?",
   "Can I help you with something?",
@@ -20,14 +20,14 @@ const snarkyComments = [
   "1 + 1 = 2 *hint*",
 ];
 
-// PRESS FOR RANDOM SNARKY COMMENT
+// PRESS FOR RANDOM SNARKY COMMENT ***************
 snarky.addEventListener("click", () => {
   commentBox.classList.remove("hide");
   commentBox.innerText =
     snarkyComments[Math.floor(Math.random() * snarkyComments.length)];
 });
 
-// PRESS TO HIDE SNARKY COMMENT
+// PRESS TO HIDE SNARKY COMMENT ***************
 commentBox.addEventListener("click", () => {
   commentBox.classList.add("hide");
 });
@@ -35,14 +35,14 @@ commentBox.addEventListener("click", () => {
 // -----SNARKY FUNCTIONS-----
 
 // CHANGE SNARKYS COLORS
-// ARROW RIGHT FUNCTION
+// ARROW RIGHT FUNCTION ***************
 document.addEventListener("keydown", (e) => {
   if (event.keyCode === 39) {
     robotHead.style.fill =
       backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
   }
 });
-// ARROW LEFT FUNCTION
+// ARROW LEFT FUNCTION ***************
 document.addEventListener("keydown", (e) => {
   if (e.keyCode === 37) {
     robotBelly.style.fill =

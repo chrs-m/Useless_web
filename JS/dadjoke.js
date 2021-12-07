@@ -1,8 +1,8 @@
-// PRESS FOR JOKE FUNCTION
+// PRESS FOR JOKE FUNCTION ***************
 const dadEmoji = document.querySelector(".dad-emoji");
 const jokeContainer = document.querySelector(".dad-joke");
 
-// RUN THIS CODE FOR LOCAL API
+// RUN THIS CODE FOR LOCAL API ***************
 
 // // REQUEST CONST
 // const myRequest = new Request("api/jokes.json");
@@ -19,7 +19,7 @@ const jokeContainer = document.querySelector(".dad-joke");
 
 // ----------------------------------------------------------------
 
-// RUN THIS CODE TO USE DAD JOKE API
+// RUN THIS CODE TO USE DAD JOKE API ***************
 
 dadEmoji.addEventListener("click", generateJokes);
 
@@ -35,7 +35,7 @@ async function generateJokes() {
   jokeContainer.innerText = joke.joke;
 }
 
-// TO HIDE THE JOKE CONTAINER
+// TO HIDE THE JOKE CONTAINER ***************
 jokeContainer.addEventListener("click", () => {
   jokeContainer.classList.add("hide");
 });
