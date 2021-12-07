@@ -1,5 +1,7 @@
 const snarky = document.querySelector(".snarky");
-const triangle = document.querySelector(".triangle");
+const robotHead = document.querySelector(".robot-head");
+const robotBelly = document.querySelector(".robot-belly");
+const robotLight = document.querySelector(".robot-light");
 const commentBox = document.querySelector(".comment");
 
 // SNARKY COMMENTS
@@ -36,14 +38,14 @@ commentBox.addEventListener("click", () => {
 // ARROW RIGHT FUNCTION
 document.addEventListener("keydown", (e) => {
   if (event.keyCode === 39) {
-    triangle.style.borderBottomColor =
+    robotHead.style.fill =
       backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
   }
 });
 // ARROW LEFT FUNCTION
 document.addEventListener("keydown", (e) => {
   if (e.keyCode === 37) {
-    snarky.style.backgroundColor =
+    robotBelly.style.fill =
       backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
   }
 });

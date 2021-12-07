@@ -4,20 +4,15 @@
   padding: 0;
 }
 
-.snarky {
+.snarky svg {
   position: fixed;
-  left: 16px;
   top: 16px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: hotpink;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.2s all linear;
-  box-shadow: 0 0 10px 2px var(--blackish);
+  left: 16px;
+  height: 3.5rem;
+}
+
+.robot-light {
+  fill: rgb(255, 94, 0);
 }
 
 .triangle {
@@ -34,7 +29,7 @@
   font-family: "LemonMilk";
   position: fixed;
   left: 24px;
-  top: 75px;
+  top: 80px;
   margin-right: 16px;
   width: auto;
   height: auto;
@@ -54,6 +49,6 @@
 
 @media screen and (min-width: 1024px) {
   .comment {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 }

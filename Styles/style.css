@@ -159,7 +159,7 @@ body.wrong {
 
 .dad-emoji {
   position: fixed;
-  right: 24px;
+  right: 16px;
   top: 8px;
   font-size: 3.5rem;
   cursor: pointer;
@@ -216,11 +216,11 @@ body.wrong {
 
 @media screen and (min-width: 1024px) {
   .dad-joke {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 
   .info-container {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 
