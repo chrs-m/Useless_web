@@ -1,0 +1,32 @@
+.scoreboard {
+  display: block;
+  font-family: LouisGeorgeCafe;
+  position: fixed;
+  width: 14em;
+  margin: auto;
+  top: 8px;
+}
+.scoreboard h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.scoreboard table {
+  margin: 10px auto;
+  width: 100%;
+  border-collapse: collapse;
+}
+.scoreboard th,
+.scoreboard td {
+  text-align: center;
+}
+.scoreboard td {
+  font-size: 3em;
+  padding: 0 20px;
+}
+
+@media (max-width: 767px) {
+  .scoreboard {
+    display: none;
+  }
+}

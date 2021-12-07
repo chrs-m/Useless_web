@@ -77,7 +77,13 @@ const resetState = () => {
   }
 };
 
-// SELECTED ANSWER EVENTS AND RESTART ***************
+// SELECTED ANSWER EVENTS AND RESTART (INCL. SCOREBOARD) ***************
+const correctScore = document.getElementById("correctScore");
+const wrongScore = document.getElementById("wrongScore");
+
+let correctScoring = 0;
+let wrongScoring = 0;
+
 const selectAnswer = (e) => {
   const selectedButton = e.target;
   const correct = selectedButton.dataset.correct;
@@ -91,7 +97,15 @@ const selectAnswer = (e) => {
     startButton.innerText = "Go again?";
     startButton.classList.remove("hide");
   }
-  // selectedButton.style.backgroundColor = "rgb(143, 143, 143)";
+  selectedButton.classList.add("choosenAnswerBackground");
+
+  if (selectedButton.dataset.correct) {
+    correctScoring++;
+    correctScore.innerHTML = correctScoring;
+  } else {
+    wrongScoring++;
+    wrongScore.innerHTML = wrongScoring;
+  }
 };
 
 // SNARKY COMMENTS ***************

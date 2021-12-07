@@ -22,7 +22,7 @@
   left: 24px;
   top: 80px;
   margin-right: 16px;
-  width: auto;
+  max-width: 250px;
   height: auto;
   background-color: rgb(105, 255, 230);
   padding: 5px 5px;
@@ -41,6 +41,7 @@
 @media screen and (min-width: 1024px) {
   .comment {
     font-size: 1.1rem;
+    max-width: 500px;
   }
 }
 

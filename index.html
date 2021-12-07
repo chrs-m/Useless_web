@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="Styles/style.css" />
     <link rel="stylesheet" href="Styles/quiz.css" />
     <link rel="stylesheet" href="Styles/snarky.css" />
+    <link rel="stylesheet" href="Styles/scoreboard.css" />
     <title>Useless quiz</title>
   </head>
   <body>
@@ -65,6 +66,23 @@
       </svg>
     </div>
     <p class="comment hide"></p>
+    <div class="scoreboard">
+      <h2>Scoreboard</h2>
+      <table>
+        <tbody>
+          <tr>
+            <td id="correctScore">0</td>
+            <td id="wrongScore">0</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th>Correct</th>
+            <th>Wrong</th>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
     <div class="container">
       <div id="question-container" class="question-container hide">
         <div id="question" class="question">Question</div>
