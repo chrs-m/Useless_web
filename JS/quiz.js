@@ -19,7 +19,9 @@ const startGame = () => {
   shuffledQuestions = questions.sort(() => Math.random() - 0.5);
   currentQuestionIndex = 0;
   questionContainer.classList.remove("hide");
-  container.style.top = "25%";
+  if (window.innerWidth <= 400) {
+    container.style.top = "22%";
+  }
   setNextQuestion();
 };
 
