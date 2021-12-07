@@ -1,4 +1,5 @@
 const snarky = document.querySelector(".snarky");
+const robot = document.querySelector(".snarky svg");
 const robotHead = document.querySelector(".robot-head");
 const robotBelly = document.querySelector(".robot-belly");
 const robotLight = document.querySelector(".robot-light");
@@ -22,6 +23,7 @@ const snarkyComments = [
 
 // PRESS FOR RANDOM SNARKY COMMENT ***************
 snarky.addEventListener("click", () => {
+  robot.classList.toggle("animation");
   commentBox.classList.remove("hide");
   commentBox.innerText =
     snarkyComments[Math.floor(Math.random() * snarkyComments.length)];

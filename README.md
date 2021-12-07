@@ -11,6 +11,8 @@ Just your average useless quiz game with a touch of sass (you've been warned). L
 
 # Code Review
 
+Code review written by [Jennifer Andersson](https://github.com/JennAnd).
+
 1. `example.js:10-15` - Remember to think about X and this could be refactored using the amazing Y function.
 1. `example.js:10-15` - Remember to think about X and this could be refactored using the amazing Y function.
 1. `example.js:10-15` - Remember to think about X and this could be refactored using the amazing Y function.
