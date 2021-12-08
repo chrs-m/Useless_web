@@ -14,14 +14,16 @@
 @font-face {
   font-family: "LouisGeorgeCafe";
   src: local("LouisGeorgeCafe"),
-    url(../Fonts/Louis_George_Cafe.woff2) format("woff2");
+    url(../Fonts/Louis_George_Cafe.woff2) format("woff2"),
+    url(../Fonts/Louis_George_Cafe.woff) format("woff");
   font-weight: normal;
 }
 
 @font-face {
   font-family: "LouisGeorgeCafe";
   src: local("LouisGeorgeCafe"),
-    url(../Fonts/Louis_George_Cafe_Bold.woff2) format("woff2");
+    url(../Fonts/Louis_George_Cafe_Bold.woff2) format("woff2"),
+    url(../Fonts/Louis_George_Cafe_Bold.woff) format("woff");
   font-weight: bold;
 }
 
