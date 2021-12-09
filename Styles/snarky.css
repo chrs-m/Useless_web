@@ -32,6 +32,15 @@
   box-shadow: 0 0 10px 2px var(--blackish);
 }
 
+.arrow-container {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  left: 18px;
+  top: 72px;
+  width: 56px;
+}
+
 @media screen and (min-width: 400px) {
   .comment {
     font-size: 1rem;
@@ -43,17 +52,21 @@
     font-size: 1.1rem;
     max-width: 500px;
   }
+
+  .arrow-container {
+    display: none;
+  }
 }
 
 /* ANIMATIONS & KEYFRAMES */
 .animation {
-  animation-name: spinMe;
+  animation-name: jiggle;
   animation-duration: 0.5s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
 
-@keyframes spinMe {
+@keyframes jiggle {
   0% {
     transform: rotate(0deg);
   }

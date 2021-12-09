@@ -1,9 +1,11 @@
-const snarky = document.querySelector(".snarky");
+// const snarky = document.querySelector(".snarky");
 const robot = document.querySelector(".snarky svg");
 const robotHead = document.querySelector(".robot-head");
 const robotBelly = document.querySelector(".robot-belly");
 const robotLight = document.querySelector(".robot-light");
 const commentBox = document.querySelector(".comment");
+const arrowRight = document.querySelector(".arrow-right");
+const arrowLeft = document.querySelector(".arrow-left");
 
 // SNARKY COMMENTS ***************
 const snarkyComments = [
@@ -26,7 +28,7 @@ const snarkyComments = [
 ];
 
 // PRESS FOR RANDOM SNARKY COMMENT ***************
-snarky.addEventListener("click", () => {
+robot.addEventListener("click", () => {
   robot.classList.toggle("animation");
   commentBox.classList.remove("hide");
   commentBox.innerText =
@@ -48,10 +50,23 @@ document.addEventListener("keydown", (e) => {
       backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
   }
 });
+
+// IF WINDOW SIZE < 1024PX, ARROWS APPEAR UNDER SNARKY
+arrowRight.addEventListener("click", () => {
+  robotHead.style.fill =
+    backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
+});
+
 // ARROW LEFT FUNCTION ***************
 document.addEventListener("keydown", (e) => {
   if (e.keyCode === 37) {
     robotBelly.style.fill =
       backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
   }
+});
+
+// IF WINDOW SIZE < 1024PX, ARROWS APPEAR UNDER SNARKY
+arrowLeft.addEventListener("click", () => {
+  robotBelly.style.fill =
+    backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
 });
