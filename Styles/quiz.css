@@ -11,6 +11,7 @@
   top: 30%;
 }
 
+/* QUESTION STYLING */
 .question {
   font-family: "MagicMushroom";
   font-size: 2rem;
@@ -18,6 +19,7 @@
   margin-left: 24px;
 }
 
+/* BUTTON STYLING */
 .btn-grid {
   display: grid;
   grid-template-columns: repeat(1, auto);
@@ -57,6 +59,7 @@
   border: 2px solid var(--wrong-color);
 }
 
+/* STYLING FOR SELECTED ANSWER */
 .choosenAnswerBackground {
   background: repeating-linear-gradient(
     -45deg,
@@ -65,6 +68,7 @@
   );
 }
 
+/* START AND NEXT BUTTONS */
 .start-btn,
 .next-btn {
   font-size: 1.5rem;
@@ -80,6 +84,7 @@
   align-items: center;
 }
 
+/* MEDIA QUERIES */
 @media screen and (min-width: 400px) {
   .question {
     font-size: 3rem;

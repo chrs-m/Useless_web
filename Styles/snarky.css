@@ -4,6 +4,7 @@
   padding: 0;
 }
 
+/* ROBOT IMGAGE */
 .snarky svg {
   position: fixed;
   top: 16px;
@@ -12,10 +13,7 @@
   height: 2.5rem;
 }
 
-.robot-light {
-  fill: rgb(255, 94, 0);
-}
-
+/* SNARKY COMMENT */
 .comment {
   font-family: "LouisGeorgeCafe";
   position: fixed;
@@ -32,6 +30,7 @@
   box-shadow: 0 0 10px 2px var(--blackish);
 }
 
+/* ARROWS FOR CHANGING COLORS */
 .arrow-container {
   position: fixed;
   display: block;
@@ -50,6 +49,7 @@
   width: 16px;
 }
 
+/* MEDIA QUERIES */
 @media screen and (min-width: 400px) {
   .comment {
     font-size: 1rem;

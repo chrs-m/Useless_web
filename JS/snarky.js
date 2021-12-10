@@ -51,7 +51,7 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-// IF WINDOW SIZE < 1024PX, ARROWS APPEAR UNDER SNARKY
+// IF WINDOW SIZE < 1024PX, ARROWS APPEAR NEXT TO SNARKY
 arrowRight.addEventListener("click", () => {
   robotHead.style.fill =
     backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
@@ -65,7 +65,7 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-// IF WINDOW SIZE < 1024PX, ARROWS APPEAR UNDER SNARKY
+// IF WINDOW SIZE < 1024PX, ARROWS APPEAR NEXT TO SNARKY
 arrowLeft.addEventListener("click", () => {
   robotBelly.style.fill =
     backgroundColors[Math.floor(Math.random() * backgroundColors.length)];

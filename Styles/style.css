@@ -4,6 +4,7 @@
   padding: 0;
 }
 
+/* FONTS */
 @font-face {
   font-family: "MagicMushroom";
   src: local("MagicMushroom"),
@@ -52,10 +53,12 @@ body.wrong {
   --color: var(--wrong-color);
 }
 
+/* HIDE CLASS */
 .hide {
   display: none;
 }
 
+/* CONFETTI SURPRISE */
 .surprise {
   position: fixed;
   right: 24px;
@@ -64,6 +67,7 @@ body.wrong {
   height: 2rem;
 }
 
+/* INFORMATION STUFF */
 .info {
   position: fixed;
   left: 24px;
@@ -89,6 +93,7 @@ body.wrong {
   font-family: "LouisGeorgeCafe";
 }
 
+/* DAD JOKE STUFF */
 .dad-emoji {
   position: fixed;
   right: 16px;
