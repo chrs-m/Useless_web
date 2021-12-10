@@ -130,11 +130,23 @@ body.wrong {
 @media screen and (min-width: 1024px) {
   .dad-joke {
     font-size: 1.1rem;
-    max-width: 500px;
+    max-width: 400px;
   }
 
   .info-container {
     font-size: 1.1rem;
+  }
+
+  .dad-emoji {
+    height: 3rem;
+  }
+
+  .info {
+    height: 3rem;
+  }
+
+  .surprise {
+    height: 3rem;
   }
 }
 

@@ -45,3 +45,12 @@ info.addEventListener("click", () => {
 infoContainer.addEventListener("click", () => {
   infoContainer.classList.add("hide");
 });
+
+// HIDE AND SHOW THE SCOREBOARD ***************
+const scoreboard = document.querySelector(".scoreboard");
+const hideShowButton = document.querySelector(".hide-show-arrow");
+
+hideShowButton.addEventListener("click", () => {
+  hideShowButton.classList.toggle("rotate");
+  scoreboard.classList.toggle("hide-scoreboard");
+});

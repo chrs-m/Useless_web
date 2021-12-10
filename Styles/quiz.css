@@ -13,7 +13,7 @@
 
 .question {
   font-family: "MagicMushroom";
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-left: 24px;
 }
@@ -81,6 +81,10 @@
 }
 
 @media screen and (min-width: 400px) {
+  .question {
+    font-size: 3rem;
+  }
+
   .container {
     top: 35%;
   }
