@@ -8,8 +8,8 @@
   position: fixed;
   top: 16px;
   left: 16px;
-  height: 3.5rem;
   cursor: pointer;
+  height: 2.5rem;
 }
 
 .robot-light {
@@ -20,7 +20,7 @@
   font-family: "LouisGeorgeCafe";
   position: fixed;
   left: 24px;
-  top: 80px;
+  top: 72px;
   margin-right: 16px;
   max-width: 250px;
   height: auto;
@@ -34,11 +34,20 @@
 
 .arrow-container {
   position: fixed;
-  display: flex;
+  display: block;
   justify-content: space-between;
-  left: 18px;
-  top: 72px;
-  width: 56px;
+  left: 64px;
+  top: 16px;
+}
+
+.arrow-left {
+  width: 16px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.arrow-right {
+  width: 16px;
 }
 
 @media screen and (min-width: 400px) {

@@ -15,6 +15,7 @@
   font-family: "MagicMushroom";
   font-size: 3rem;
   font-weight: bold;
+  margin-left: 24px;
 }
 
 .btn-grid {
@@ -70,6 +71,7 @@
   font-weight: bold;
   padding: 8px 8px;
   cursor: pointer;
+  letter-spacing: 1.5px;
 }
 
 .controls {
@@ -82,18 +84,20 @@
   .container {
     top: 35%;
   }
+
+  .btn {
+    font-size: 1.4rem;
+  }
+
   .start-btn,
   .next-btn {
     font-size: 2rem;
-  }
-
-  .btn {
-    font-size: 1.5rem;
+    width: calc(100% - 40px);
   }
 
   .btn-grid {
     display: grid;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(2, 2fr);
     gap: 10px;
     margin: 20px;
   }
