@@ -119,7 +119,7 @@ body.wrong {
 }
 
 /* MEDIA QUERIES */
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 425px) {
   .info-container {
     width: auto;
     height: auto;

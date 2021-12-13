@@ -85,7 +85,7 @@
 }
 
 /* MEDIA QUERIES */
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 426px) {
   .question {
     font-size: 3rem;
   }
