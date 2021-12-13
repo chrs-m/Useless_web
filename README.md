@@ -20,7 +20,6 @@ Code review written by [Jennifer Andersson](https://github.com/JennAnd).
 5. Good that you use the same unit in font-sizes. You have many font-sizes in your css so you could have placed them in the root, same as you did with colors.
 6. Incredibly well structured website which makes it easy to read. Great work!
 
-
 # Testers
 
 Tested by the following people:
