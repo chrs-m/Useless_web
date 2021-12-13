@@ -13,11 +13,13 @@ Just your average useless quiz game with a touch of sass (you've been warned). L
 
 Code review written by [Jennifer Andersson](https://github.com/JennAnd).
 
-1. `example.js:10-15` - Remember to think about X and this could be refactored using the amazing Y function.
-1. `example.js:10-15` - Remember to think about X and this could be refactored using the amazing Y function.
-1. `example.js:10-15` - Remember to think about X and this could be refactored using the amazing Y function.
-1. `example.js:10-15` - Remember to think about X and this could be refactored using the amazing Y function.
-1. `example.js:10-15` - Remember to think about X and this could be refactored using the amazing Y function.
+1. `quiz.js: row 104 and 107` - Instead of using innerHTML you can use text-Content.
+2. When the screen is less than 768 px, the score board disappears.
+3. You can get more than one "wrong" on the same question.
+4. When you use "not the smallest phone" some of the text in the quiz is not fitting the boxes.
+5. Good that you use the same unit in font-sizes. You have many font-sizes in your css so you could have placed them in the root, same as you did with colors.
+6. Incredibly well structured website which makes it easy to read. Great work!
+
 
 # Testers
 
